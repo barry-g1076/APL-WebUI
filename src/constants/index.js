@@ -44,7 +44,7 @@ export const navigation = [
   },
   {
     id: "1",
-    title: "Pricing",
+    title: "characteristics",
     url: "#pricing",
   },
   {
@@ -54,18 +54,18 @@ export const navigation = [
   },
   {
     id: "3",
-    title: "Roadmap",
-    url: "#roadmap",
+    title: "Team",
+    url: "#Team",
   },
   {
     id: "4",
-    title: "New account",
+    title: "Editor",
     url: "#signup",
     onlyMobile: true,
   },
   {
     id: "5",
-    title: "Sign in",
+    title: "Documentation",
     url: "#login",
     onlyMobile: true,
   },
@@ -244,16 +244,16 @@ export const pricing = [
 export const benefits = [
   {
     id: "0",
-    title: "Ask anything",
-    text: "Lets users quickly find answers to their questions without having to search through multiple sources.",
+    title: "Perform Arithmetic",
+    text: "TypeSnake enables programmers to execute arithmetic operations seamlessly within their code. From simple calculations to complex mathematical equations, TypeSnake provides robust support for arithmetic operations, ensuring accurate computation in your programs.",
     backgroundUrl: "./src/assets/benefits/card-1.svg",
     iconUrl: benefitIcon1,
     imageUrl: benefitImage2,
   },
   {
     id: "1",
-    title: "Improve everyday",
-    text: "The app uses natural language processing to understand user queries and provide accurate and relevant responses.",
+    title: "Create Functions",
+    text: "With TypeSnake, developers can easily define and utilize functions to encapsulate reusable blocks of code. Whether it's implementing custom algorithms or organizing program logic into modular units, TypeSnake empowers programmers to streamline their code and enhance code readability through the creation of functions.",
     backgroundUrl: "./src/assets/benefits/card-2.svg",
     iconUrl: benefitIcon2,
     imageUrl: benefitImage2,
@@ -261,16 +261,16 @@ export const benefits = [
   },
   {
     id: "2",
-    title: "Connect everywhere",
-    text: "Connect with the AI chatbot from anywhere, on any device, making it more accessible and convenient.",
+    title: "Error Handling",
+    text: "TypeSnake prioritizes robust error handling mechanisms to help developers detect, manage, and resolve errors effectively. By providing comprehensive error reporting and debugging tools, TypeSnake ensures smoother development experiences, enabling programmers to identify and address errors efficiently, thus enhancing code reliability and maintainability.",
     backgroundUrl: "./src/assets/benefits/card-3.svg",
     iconUrl: benefitIcon3,
     imageUrl: benefitImage2,
   },
   {
     id: "3",
-    title: "Fast responding",
-    text: "Lets users quickly find answers to their questions without having to search through multiple sources.",
+    title: "Control Structures",
+    text: "TypeSnake offers a rich set of control structures that empower programmers to manage program flow and make decisions based on specific conditions. From conditional statements like when-otherwise and loop constructs such as for and aslongas, TypeSnake provides versatile control mechanisms to navigate through code execution paths, facilitating the creation of dynamic and responsive programs.",
     backgroundUrl: "./src/assets/benefits/card-4.svg",
     iconUrl: benefitIcon4,
     imageUrl: benefitImage2,
