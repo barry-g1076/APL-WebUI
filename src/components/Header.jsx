@@ -71,10 +71,10 @@ const Header = () => {
           href="#Editor"
           className="button hidden mr-8 text-n-1/50 transition-colors hover:text-n-1 lg:block"
         >
-          Editor
+          Documentation
         </a>
         <Button className="hidden lg:flex" href="#Docs">
-          Docs 
+          Demo 
         </Button>
 
         <Button
