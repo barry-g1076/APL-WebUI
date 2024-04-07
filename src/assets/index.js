@@ -51,6 +51,9 @@ import roadmap2 from "./roadmap/image-2.png";
 import roadmap3 from "./roadmap/image-3.png";
 import roadmap4 from "./roadmap/image-4.png";
 import undone from "./roadmap/undone.svg";
+import lexnpars from "./roadmap/lexerandparser.png"
+import semantics from './roadmap/semantics.png'
+import ai_integration from './roadmap/ai_integration.png'
 
 import notification1 from "./notification/image-1.png";
 import notification2 from "./notification/image-2.png";
@@ -75,6 +78,11 @@ import instagram from "./socials/instagram.svg";
 import telegram from "./socials/telegram.svg";
 import twitter from "./socials/twitter.svg";
 
+import microsoft from './ai/microsoft-copilot.svg';
+import jasper from './ai/jasper-ai.svg';
+import bard from './ai/bard.svg';
+import chatgpt from './ai/chatgpt-light.svg'
+import claude from './ai/claude.svg'
 
 
 export {
@@ -126,6 +134,9 @@ export {
   roadmap3,
   roadmap4,
   undone,
+  lexnpars,
+  semantics,
+  ai_integration,
   notification1,
   notification2,
   notification3,
@@ -146,5 +157,9 @@ export {
   instagram,
   telegram,
   twitter,
-
+  microsoft,
+  jasper,
+  bard,
+  chatgpt,
+  claude,
 };

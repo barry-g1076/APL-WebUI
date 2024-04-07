@@ -4,8 +4,6 @@ import {
   benefitIcon3,
   benefitIcon4,
   benefitImage2,
-  chromecast,
-  disc02,
   discord,
   discordBlack,
   facebook,
@@ -22,19 +20,19 @@ import {
   plusSquare,
   protopie,
   raindrop,
-  recording01,
-  recording03,
-  roadmap1,
-  roadmap2,
   roadmap3,
-  roadmap4,
+  lexnpars,
+  semantics,
+  ai_integration,
   searchMd,
   slack,
-  sliders04,
   telegram,
   twitter,
-  yourlogo,
-
+  microsoft,
+  jasper,
+  bard,
+  chatgpt,
+  claude,
 } from "../assets";
 
 export const navigation = [
@@ -46,7 +44,7 @@ export const navigation = [
   {
     id: "1",
     title: "characteristics",
-    url: "#pricing",
+    url: "#characteristics",
   },
   {
     id: "2",
@@ -56,18 +54,18 @@ export const navigation = [
   {
     id: "3",
     title: "Team",
-    url: "#Team",
+    url: "#team",
   },
   {
     id: "4",
-    title: "Editor",
-    url: "#signup",
+    title: "Documentation",
+    url: "#documentation",
     onlyMobile: true,
   },
   {
     id: "5",
-    title: "Documentation",
-    url: "#login",
+    title: "Editor",
+    url: "#Editor",
     onlyMobile: true,
   },
 ];
@@ -76,7 +74,6 @@ export const heroIcons = [homeSmile, file02, searchMd, plusSquare];
 
 export const notificationImages = [notification4, notification3, notification2];
 
-export const companyLogos = [yourlogo, yourlogo, yourlogo, yourlogo, yourlogo];
 
 export const brainwaveServices = [
   "Endless gratitude to Mr. David White",
@@ -84,47 +81,41 @@ export const brainwaveServices = [
   "Educated in APL (CIT 4004)",
 ];
 
-export const brainwaveServicesIcons = [
-  recording03,
-  recording01,
-  disc02,
-  chromecast,
-  sliders04,
-];
+export const brainwaveServicesIcons = [microsoft, jasper, bard, chatgpt, claude];
 
 export const roadmap = [
   {
     id: "0",
-    title: "Voice recognition",
-    text: "Enable the chatbot to understand and respond to voice commands, making it easier for users to interact with the app hands-free.",
+    title: "lexer and Parser",
+    text: "The TypeSnake parser and lexer were meticulously crafted using Python's PLY (Python Lex-Yacc), ensuring robustness and efficiency in parsing and tokenizing code structures with precision and reliability.",
     date: "April 2024",
     status: "done",
-    imageUrl: roadmap1,
+    imageUrl: lexnpars,
     colorful: true,
   },
   {
     id: "1",
-    title: "Gamification",
-    text: "Add game-like elements, such as badges or leaderboards, to incentivize users to engage with the chatbot more frequently.",
+    title: "Semantics and Compiler",
+    text: "The TypeSnake compiler and semantics are meticulously crafted for efficient code interpretation and translation, ensuring high performance and accuracy for developers.",
     date: "April 2024",
-    status: "progress",
-    imageUrl: roadmap2,
+    status: "done",
+    imageUrl: semantics,
   },
   {
     id: "2",
-    title: "Chatbot customization",
-    text: "Allow users to customize the chatbot's appearance and behavior, making it more engaging and fun to interact with.",
+    title: "TypeSnake App",
+    text: "TypeSnake App: Currently in Development, Coming Soon!.",
     date: "April 2024",
-    status: "done",
+    status: "progress",
     imageUrl: roadmap3,
   },
   {
     id: "3",
-    title: "Integration with APIs",
-    text: "Allow the chatbot to access external data sources, such as weather APIs or news APIs, to provide more relevant recommendations.",
+    title: "Integration with LLM",
+    text: "The TypeSnake IDE integrates AI for enhanced productivity, revolutionizing coding experiences with intelligent assistance.",
     date: "April 2024",
     status: "progress",
-    imageUrl: roadmap4,
+    imageUrl: ai_integration,
   },
 ];
 
@@ -246,7 +237,7 @@ export const benefits = [
   {
     id: "0",
     title: "Perform Arithmetic",
-    text: "TypeSnake enables programmers to execute arithmetic operations seamlessly within their code. From simple calculations to complex mathematical equations, TypeSnake provides robust support for arithmetic operations, ensuring accurate computation in your programs.",
+    text: "TypeSnake offers seamless arithmetic operations, supporting both simple calculations and complex equations for accurate computation.",
     backgroundUrl: "./src/assets/benefits/card-1.svg",
     iconUrl: benefitIcon1,
     imageUrl: benefitImage2,
@@ -254,7 +245,7 @@ export const benefits = [
   {
     id: "1",
     title: "Create Functions",
-    text: "With TypeSnake, developers can easily define and utilize functions to encapsulate reusable blocks of code. Whether it's implementing custom algorithms or organizing program logic into modular units, TypeSnake empowers programmers to streamline their code and enhance code readability through the creation of functions.",
+    text: "TypeSnake empowers developers to streamline code and enhance readability by easily defining and utilizing functions for encapsulating reusable code blocks.",
     backgroundUrl: "./src/assets/benefits/card-2.svg",
     iconUrl: benefitIcon2,
     imageUrl: benefitImage2,
@@ -263,7 +254,7 @@ export const benefits = [
   {
     id: "2",
     title: "Error Handling",
-    text: "TypeSnake prioritizes robust error handling mechanisms to help developers detect, manage, and resolve errors effectively. By providing comprehensive error reporting and debugging tools, TypeSnake ensures smoother development experiences, enabling programmers to identify and address errors efficiently, thus enhancing code reliability and maintainability.",
+    text: "TypeSnake ensures smoother development experiences with robust error handling, offering comprehensive reporting and debugging tools to enhance code reliability and maintainability.",
     backgroundUrl: "./src/assets/benefits/card-3.svg",
     iconUrl: benefitIcon3,
     imageUrl: benefitImage2,
@@ -271,7 +262,7 @@ export const benefits = [
   {
     id: "3",
     title: "Control Structures",
-    text: "TypeSnake offers a rich set of control structures that empower programmers to manage program flow and make decisions based on specific conditions. From conditional statements like when-otherwise and loop constructs such as for and aslongas, TypeSnake provides versatile control mechanisms to navigate through code execution paths, facilitating the creation of dynamic and responsive programs.",
+    text: "TypeSnake provides versatile control structures, empowering programmers to manage program flow and make decisions efficiently, facilitating the creation of dynamic and responsive programs.",
     backgroundUrl: "./src/assets/benefits/card-4.svg",
     iconUrl: benefitIcon4,
     imageUrl: benefitImage2,
