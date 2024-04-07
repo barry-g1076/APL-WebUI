@@ -59,13 +59,13 @@ const Teams = () => {
           <TeamCard
             jobTitle="Language & Grammer Architect"
             name="Sharethia McCarthy"
-            id="1908850"
+            id="2000191"
           />
 
           <TeamCard
             jobTitle="UX, UI & Syntax Designer"
             name="Christina Wilson"
-            id="Utech id"
+            id="1903419"
           />
         </div>
       </div>
