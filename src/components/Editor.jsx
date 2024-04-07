@@ -34,7 +34,7 @@ const CodeEditor = () => {
   };
   return (
     <Section crosses>
-      <Heading tag="Code Editor" title="Code Editor" />
+      <Heading tag="Code Editor" title="DEMO" />
       <div className="mr-20 w-40 h-12 float-right flex items-end justify-around pb-2">
         <button
           id="run"
@@ -96,7 +96,11 @@ const CodeEditor = () => {
           <IoSend className="absolute right-2 top-3 hover:text-blue-300 cursor-pointer" />
         </div>
       </DrawerDemo>
-      <DrawerDemo isOpen={isTerminalDrawerOpen}  onClose={closeTerminalDrawer} title={"Terminal"}>
+      <DrawerDemo
+        isOpen={isTerminalDrawerOpen}
+        onClose={closeTerminalDrawer}
+        title={"Terminal"}
+      >
         <Terminal />
       </DrawerDemo>
     </Section>

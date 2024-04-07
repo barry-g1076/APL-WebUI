@@ -9,6 +9,7 @@ import grid from "./grid.png";
 import check2 from "./check-02.svg";
 import loading1 from "./loading-01.svg";
 import yourlogo from "./yourlogo.svg";
+import typesnake from "./logo.png";
 import homeSmile from "./home-smile.svg";
 import file02 from "./file-02.svg";
 import searchMd from "./search-md.svg";
@@ -51,9 +52,9 @@ import roadmap2 from "./roadmap/image-2.png";
 import roadmap3 from "./roadmap/image-3.png";
 import roadmap4 from "./roadmap/image-4.png";
 import undone from "./roadmap/undone.svg";
-import lexnpars from "./roadmap/lexerandparser.png"
-import semantics from './roadmap/semantics.png'
-import ai_integration from './roadmap/ai_integration.png'
+import lexnpars from "./roadmap/lexerandparser.png";
+import semantics from "./roadmap/semantics.png";
+import ai_integration from "./roadmap/ai_integration.png";
 
 import notification1 from "./notification/image-1.png";
 import notification2 from "./notification/image-2.png";
@@ -78,15 +79,17 @@ import instagram from "./socials/instagram.svg";
 import telegram from "./socials/telegram.svg";
 import twitter from "./socials/twitter.svg";
 
-import microsoft from './ai/microsoft-copilot.svg';
-import jasper from './ai/jasper-ai.svg';
-import bard from './ai/bard.svg';
-import chatgpt from './ai/chatgpt-light.svg'
-import claude from './ai/claude.svg'
+import microsoft from "./ai/microsoft-copilot.svg";
+import jasper from "./ai/jasper-ai.svg";
+import bard from "./ai/bard.svg";
+import chatgpt from "./ai/chatgpt-light.svg";
+import claude from "./ai/claude.svg";
 
+import typesnaketext from "./typesnake_text.png";
 
 export {
   brainwave,
+  typesnaketext,
   check,
   check2,
   loading1,
@@ -95,6 +98,7 @@ export {
   play,
   gradient,
   smallSphere,
+  typesnake,
   grid,
   yourlogo,
   homeSmile,

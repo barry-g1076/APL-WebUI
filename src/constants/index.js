@@ -43,19 +43,20 @@ export const navigation = [
   },
   {
     id: "1",
-    title: "characteristics",
-    url: "#characteristics",
-  },
-  {
-    id: "2",
-    title: "How to use",
+    title: "Acknowledgements",
     url: "#how-to-use",
   },
   {
-    id: "3",
+    id: "2",
     title: "Team",
     url: "#team",
   },
+  {
+    id: "3",
+    title: "Roadmap",
+    url: "#roadmap",
+  },
+
   {
     id: "4",
     title: "Documentation",
@@ -74,19 +75,24 @@ export const heroIcons = [homeSmile, file02, searchMd, plusSquare];
 
 export const notificationImages = [notification4, notification3, notification2];
 
-
 export const brainwaveServices = [
   "Endless gratitude to Mr. David White",
   "Special thanks to Microsoft",
   "Educated in APL (CIT 4004)",
 ];
 
-export const brainwaveServicesIcons = [microsoft, jasper, bard, chatgpt, claude];
+export const brainwaveServicesIcons = [
+  microsoft,
+  jasper,
+  bard,
+  chatgpt,
+  claude,
+];
 
 export const roadmap = [
   {
     id: "0",
-    title: "lexer and Parser",
+    title: "Lexer and Parser",
     text: "The TypeSnake parser and lexer were meticulously crafted using Python's PLY (Python Lex-Yacc), ensuring robustness and efficiency in parsing and tokenizing code structures with precision and reliability.",
     date: "April 2024",
     status: "done",
@@ -116,6 +122,7 @@ export const roadmap = [
     date: "April 2024",
     status: "progress",
     imageUrl: ai_integration,
+    colorful: true,
   },
 ];
 
