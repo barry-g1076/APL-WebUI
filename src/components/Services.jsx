@@ -80,8 +80,8 @@ const Services = () => {
               <div className="py-12 px-4 xl:px-8">
                 <h4 className="h4 mb-4">LLM Integration</h4>
                 <p className="body-2 mb-[2rem] text-n-3">
-                  The world’s most powerful AI photo and video art generation
-                  engine. What will you create?
+                  The world most powerful LLM integrations allows you
+                  super-charge your code
                 </p>
 
                 <ul className="flex items-center justify-between">
