@@ -48,7 +48,11 @@ const CodeEditor = () => {
       .then((data) => {
         // console.log(data.python_code); // Log the actual data received
         // con;
-        setResponseValue(data.python_code.split("\n").filter(Boolean));
+        if (data.error) {
+          setResponseValue(data.data.error.split("\n").filter(Boolean));
+        } else {
+          setResponseValue(data.python_code.split("\n").filter(Boolean));
+        }
         openTerminalDrawer();
         // console.log(data);
       })
