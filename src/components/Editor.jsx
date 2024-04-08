@@ -59,7 +59,7 @@ const CodeEditor = () => {
 
   return (
     <Section crosses>
-      <Heading tag="Code Editor" title="Code Editor" />
+      <Heading tag="Code Editor" title="DEMO" />
       <div className="mr-20 w-40 h-12 float-right flex items-end justify-around pb-2">
         <button
           id="run"
