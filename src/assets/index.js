@@ -37,9 +37,9 @@ import protopie from "./collaboration/protopie.png";
 import raindrop from "./collaboration/raindrop.png";
 import slack from "./collaboration/slack.png";
 
-import service1 from "./services/service-1.png";
-import service2 from "./services/service-2.png";
-import service3 from "./services/service-3.png";
+import acknowledgement1 from "./acknowledgement/acknowledgement-1.png";
+import acknowledgement2 from "./acknowledgement/acknowledgement-2.png";
+import acknowledgement3 from "./acknowledgement/acknowledgement-3.png";
 
 import lines from "./pricing/lines.svg";
 import stars from "./pricing/stars.svg";
@@ -125,9 +125,9 @@ export {
   protopie,
   raindrop,
   slack,
-  service1,
-  service2,
-  service3,
+  acknowledgement1,
+  acknowledgement2,
+  acknowledgement3,
   lines,
   stars,
   coins,

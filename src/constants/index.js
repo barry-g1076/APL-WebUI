@@ -44,7 +44,7 @@ export const navigation = [
   {
     id: "1",
     title: "Acknowledgements",
-    url: "#how-to-use",
+    url: "#acknowledgements",
   },
   {
     id: "2",
@@ -75,13 +75,13 @@ export const heroIcons = [homeSmile, file02, searchMd, plusSquare];
 
 export const notificationImages = [notification4, notification3, notification2];
 
-export const brainwaveServices = [
+export const typesnakeAcknowledgements = [
   "Endless gratitude to Mr. David White",
   "Special thanks to Microsoft",
   "Educated in APL (CIT 4004)",
 ];
 
-export const brainwaveServicesIcons = [
+export const typesnakeAcknowledgementsIcons = [
   microsoft,
   jasper,
   bard,
