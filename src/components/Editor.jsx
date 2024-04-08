@@ -49,7 +49,7 @@ const CodeEditor = () => {
         // console.log(data.python_code); // Log the actual data received
         // con;
         if (data.error) {
-          setResponseValue(data.data.error.split("\n").filter(Boolean));
+          setResponseValue(data.error.split("\n").filter(Boolean));
         } else {
           setResponseValue(data.python_code.split("\n").filter(Boolean));
         }
