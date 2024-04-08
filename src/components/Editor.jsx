@@ -13,6 +13,8 @@ const CodeEditor = () => {
   const [isAIDrawerOpen, setisAIDrawerOpen] = useState(false);
   const [isTerminalDrawerOpen, setisTerminalDrawerOpen] = useState(false);
   const [value, setValue] = useState("");
+  const [responseValue, setResponseValue] = useState([]);
+  const [monacoValue, setMonacoValue] = useState("");
 
   const openAIDrawer = () => {
     setisAIDrawerOpen(true);
@@ -32,6 +34,29 @@ const CodeEditor = () => {
   const handleChange = (event) => {
     setValue(event.target.value);
   };
+  
+  const generate_code = async () => {
+    await fetch("http://127.0.0.1:5000/generate_code", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ code: monacoValue }),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        // console.log(data.python_code); // Log the actual data received
+        setResponseValue(data.python_code.split("\n").filter(Boolean));
+        openTerminalDrawer();
+        // console.log(data);
+      })
+      .catch((error) => {
+        console.error("Error:", error);
+        // Handle any errors that occur during the fetch request
+      });
+  };
+
+
   return (
     <Section crosses>
       <Heading tag="Code Editor" title="Code Editor" />
@@ -39,7 +64,7 @@ const CodeEditor = () => {
         <button
           id="run"
           className={"p-2 rounded-xl border-n-10 border-2"}
-          onClick={openTerminalDrawer}
+          onClick={generate_code}
         >
           <VscRunAll />
           <Tooltip anchorSelect="#run" content="Run Program" />
@@ -65,13 +90,14 @@ const CodeEditor = () => {
           <Editor
             language="javascript"
             theme="vs-dark"
-            value="//this line is a comment"
+            value={monacoValue}
             options={{
               selectOnLineNumbers: true,
               lineNumbers: "on",
               readOnly: false, // Allows for copying code snippets
               scrollBeyondLastLine: false,
             }}
+            onChange={(monacoValue) => setMonacoValue(monacoValue)}
           />
         </div>
       </div>
@@ -96,8 +122,12 @@ const CodeEditor = () => {
           <IoSend className="absolute right-2 top-3 hover:text-blue-300 cursor-pointer" />
         </div>
       </DrawerDemo>
-      <DrawerDemo isOpen={isTerminalDrawerOpen}  onClose={closeTerminalDrawer} title={"Terminal"}>
-        <Terminal />
+      <DrawerDemo
+        isOpen={isTerminalDrawerOpen}
+        onClose={closeTerminalDrawer}
+        title={"Terminal"}
+      >
+        <Terminal items={responseValue} />
       </DrawerDemo>
     </Section>
   );
