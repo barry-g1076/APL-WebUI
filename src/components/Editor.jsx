@@ -40,19 +40,15 @@ const CodeEditor = () => {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
+        "Access-Control-Allow-Credentials": true,
       },
       body: JSON.stringify({ code: monacoValue }),
     })
       .then((response) => response.json())
       .then((data) => {
-        console.log(data); // Log the actual data received
+        // console.log(data.python_code); // Log the actual data received
         // con;
-        if (data.error) {
-          setResponseValue(data.error.split("\n").filter(Boolean));
-        } else {
-          setResponseValue(data.python_code.split("\n").filter(Boolean));
-        }
-        
+        setResponseValue(data.python_code.split("\n").filter(Boolean));
         openTerminalDrawer();
         // console.log(data);
       })
@@ -65,51 +61,47 @@ const CodeEditor = () => {
   return (
     <Section crosses>
       <Heading tag="Code Editor" title="DEMO" />
-      <div className="flex flex-col items-center w-96 md:mx-auto md:w-fit ">
-        <div className="mr-20 w-40 h-12 self-end flex items-end justify-around pb-2">
-          
-          <button
-            id="run"
-            className={"p-2 rounded-xl border-n-10 border-2"}
-            onClick={generate_code}
-          >
-            <VscRunAll />
-            <Tooltip anchorSelect="#run" content="Run Program" />
-          </button>
-          <button
-            id="ai"
-            className={"p-2 rounded-xl border-n-10 border-2"}
-            onClick={openAIDrawer}
-          >
-            <GiArtificialIntelligence />
-            <Tooltip anchorSelect="#ai" content="Consult AI" />
-          </button>
-        </div>
-        <div className=" mx-auto flex items-center h-[39rem] mb-5 border border-n-1/10 rounded-3xl overflow-hidden ">
-          <div className="w-full h-full rounded-3xl">
-            <div className="flex-none border-b border-slate-500/30 bg-white ">
-              <div className="flex items-center h-8 space-x-1.5 px-3">
-                <div className="w-2.5 h-2.5 bg-red-600 rounded-full"></div>
-                <div className="w-2.5 h-2.5 bg-green-600 rounded-full"></div>
-                <div className="w-2.5 h-2.5 bg-yellow-600 rounded-full"></div>
-              </div>
+      <div className="mr-20 w-40 h-12 float-right flex items-end justify-around pb-2">
+        <button
+          id="run"
+          className={"p-2 rounded-xl border-n-10 border-2"}
+          onClick={generate_code}
+        >
+          <VscRunAll />
+          <Tooltip anchorSelect="#run" content="Run Program" />
+        </button>
+        <button
+          id="ai"
+          className={"p-2 rounded-xl border-n-10 border-2"}
+          onClick={openAIDrawer}
+        >
+          <GiArtificialIntelligence />
+          <Tooltip anchorSelect="#ai" content="Consult AI" />
+        </button>
+      </div>
+      <div className=" w-[75rem] mx-auto flex items-center h-[39rem] mb-5 border border-n-1/10 rounded-3xl overflow-hidden ">
+        <div className="w-full h-full rounded-3xl">
+          <div className="flex-none border-b border-slate-500/30 bg-white ">
+            <div className="flex items-center h-8 space-x-1.5 px-3">
+              <div className="w-2.5 h-2.5 bg-red-600 rounded-full"></div>
+              <div className="w-2.5 h-2.5 bg-green-600 rounded-full"></div>
+              <div className="w-2.5 h-2.5 bg-yellow-600 rounded-full"></div>
             </div>
-            <Editor
-              language="javascript"
-              theme="vs-dark"
-              value={monacoValue}
-              options={{
-                selectOnLineNumbers: true,
-                lineNumbers: "on",
-                readOnly: false, // Allows for copying code snippets
-                scrollBeyondLastLine: false,
-              }}
-              onChange={(monacoValue) => setMonacoValue(monacoValue)}
-            />
           </div>
+          <Editor
+            language="javascript"
+            theme="vs-dark"
+            value={monacoValue}
+            options={{
+              selectOnLineNumbers: true,
+              lineNumbers: "on",
+              readOnly: false, // Allows for copying code snippets
+              scrollBeyondLastLine: false,
+            }}
+            onChange={(monacoValue) => setMonacoValue(monacoValue)}
+          />
         </div>
       </div>
-
       <DrawerDemo
         isOpen={isAIDrawerOpen}
         onClose={closeAIDrawer}
