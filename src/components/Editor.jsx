@@ -34,9 +34,9 @@ const CodeEditor = () => {
   const handleChange = (event) => {
     setValue(event.target.value);
   };
-  
+
   const generate_code = async () => {
-    await fetch("http://127.0.0.1:5000/generate_code", {
+    await fetch("https://typesnake.azurewebsites.net/generate_code", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -46,6 +46,7 @@ const CodeEditor = () => {
       .then((response) => response.json())
       .then((data) => {
         // console.log(data.python_code); // Log the actual data received
+        // con;
         setResponseValue(data.python_code.split("\n").filter(Boolean));
         openTerminalDrawer();
         // console.log(data);
@@ -55,7 +56,6 @@ const CodeEditor = () => {
         // Handle any errors that occur during the fetch request
       });
   };
-
 
   return (
     <Section crosses>
