@@ -1,19 +1,26 @@
 import Section from "./Section";
 import Heading from "./Heading";
-import { service1, service2, service3, check } from "../assets";
-import { brainwaveServices, brainwaveServicesIcons } from "../constants";
+import {
+  acknowledgement1,
+  acknowledgement2,
+  acknowledgement3,
+  check,
+} from "../assets";
+import {
+  typesnakeAcknowledgements,
+  typesnakeAcknowledgementsIcons,
+} from "../constants";
 import {
   PhotoChatMessage,
   Gradient,
-  // VideoBar,
-  VideoChatMessage,
-} from "./design/Services";
+  CodeChatMessage,
+} from "./design/Acknowledgements";
 
 import Generating from "./Generating";
 
-const Services = () => {
+const Acknowledgements = () => {
   return (
-    <Section id="how-to-use">
+    <Section id="acknowledgements">
       <div className="container">
         <Heading title="Proudly UTECH" text="Excellence Through Knowledge" />
 
@@ -25,7 +32,7 @@ const Services = () => {
                 width={800}
                 alt="Azure Powered"
                 height={730}
-                src={service1}
+                src={acknowledgement1}
               />
             </div>
 
@@ -35,7 +42,7 @@ const Services = () => {
                 Made possible by the collaboration of UTECH and Microsoft.
               </p>
               <ul className="body-2">
-                {brainwaveServices.map((item, index) => (
+                {typesnakeAcknowledgements.map((item, index) => (
                   <li
                     key={index}
                     className="flex items-start py-4 border-t border-n-6"
@@ -57,7 +64,7 @@ const Services = () => {
             <div className="relative min-h-[39rem] border border-n-1/10 rounded-3xl overflow-hidden">
               <div className="absolute inset-0">
                 <img
-                  src={service2}
+                  src={acknowledgement2}
                   className="h-full w-full object-cover"
                   width={630}
                   height={750}
@@ -80,12 +87,11 @@ const Services = () => {
               <div className="py-12 px-4 xl:px-8">
                 <h4 className="h4 mb-4">LLM Integration</h4>
                 <p className="body-2 mb-[2rem] text-n-3">
-                  The world’s most powerful AI photo and video art generation
-                  engine. What will you create?
+                  TypeSnake: Where coding meets AI, all in one editor.
                 </p>
 
                 <ul className="flex items-center justify-between">
-                  {brainwaveServicesIcons.map((item, index) => (
+                  {typesnakeAcknowledgementsIcons.map((item, index) => (
                     <li
                       key={index}
                       className={`rounded-2xl flex items-center justify-center ${
@@ -110,15 +116,14 @@ const Services = () => {
 
               <div className="relative h-[20rem] bg-n-8 rounded-xl overflow-hidden md:h-[25rem]">
                 <img
-                  src={service3}
+                  src={acknowledgement3}
                   className="w-full h-full object-cover"
                   width={520}
                   height={400}
                   alt="Scary robot"
                 />
 
-                <VideoChatMessage />
-                {/* <VideoBar /> */}
+                <CodeChatMessage />
               </div>
             </div>
           </div>
@@ -130,4 +135,4 @@ const Services = () => {
   );
 };
 
-export default Services;
+export default Acknowledgements;
