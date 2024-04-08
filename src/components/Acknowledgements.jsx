@@ -87,7 +87,7 @@ const Acknowledgements = () => {
               <div className="py-12 px-4 xl:px-8">
                 <h4 className="h4 mb-4">LLM Integration</h4>
                 <p className="body-2 mb-[2rem] text-n-3">
-                  TypeSnake: Where coding meets AI, all in one editor.
+                  TypeSnake: Where powerful coding meets Al, all in one editor.
                 </p>
 
                 <ul className="flex items-center justify-between">
