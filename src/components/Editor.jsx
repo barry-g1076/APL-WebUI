@@ -46,7 +46,7 @@ const CodeEditor = () => {
       setAiResults("");
     }
   }, [chatCount, lastChatTime]);
-  console.log(monacoValue);
+  // console.log(monacoValue);
 
   var user_prompt = "\n " + value;
 
@@ -96,7 +96,7 @@ const CodeEditor = () => {
     try {
       const result = await chat.sendMessage(parts[0]);
       const response = result.response;
-      console.log(response.text().split());
+      // console.log(response.text().split());
       setAiResults(response.text().split());
       setMonacoValue(response.text());
       return;
@@ -106,7 +106,7 @@ const CodeEditor = () => {
     }
     setChatCount(chatCount + 1);
     setLastChatTime(now);
-    console.log(chatCount);
+    // console.log(chatCount);
   }
   const openAIDrawer = () => {
     setisAIDrawerOpen(true);
