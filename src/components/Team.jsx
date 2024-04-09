@@ -1,7 +1,7 @@
 import Section from "./Section";
 import Heading from "./Heading";
 // import knight from "../assets/knights/knight1.jpeg";
-import knight2 from "../assets/knights/knight2.jpeg";
+// import knight2 from "../assets/knights/knight2.jpeg";
 // import knight3 from "../assets/knights/knight3.jpeg";
 
 const TeamCard = (props) => {
@@ -21,10 +21,10 @@ const TeamCard = (props) => {
       <h1 className="mx-auto mb-8 text-2xl font-semibold leading-none tracking-tighter text-white lg:text-3xl">
         {name}
       </h1>
-      <p className="mx-auto text-base font-medium leading-relaxed text-gray-500">
+      {/* <p className="mx-auto text-base font-medium leading-relaxed text-gray-500">
         Free and Premium themes, UI Kit&apos;s, templates and landing pages are
         built with Tailwind CSS, HTML &amp; Next.js.
-      </p>
+      </p> */}
       <div className="mt-4">
         <a
           href="#"

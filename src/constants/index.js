@@ -58,7 +58,7 @@ export const navigation = [
   {
     id: "5",
     title: "Editor",
-    url: "#Editor",
+    url: "#editor",
     onlyMobile: true,
   },
 ];
