@@ -38,7 +38,7 @@ const Hero = () => {
             Empower Your Code with TypeSnake: Revolutionize Programming with
             Built-In AI Editor Assistance!
           </p>
-          <Button href="/pricing" white>
+          <Button href="#editor" white>
             Visit Editor
           </Button>
         </div>

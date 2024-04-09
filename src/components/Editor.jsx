@@ -6,8 +6,26 @@ import Terminal from "./Terminal";
 import { VscRunAll } from "react-icons/vsc";
 import { GiArtificialIntelligence } from "react-icons/gi";
 import { Tooltip } from "react-tooltip";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { DrawerDemo } from "./Drawers";
+import prompt from "../constants/promtp_trainer";
+
+// node --version # Should be >= 18
+// npm install @google/generative-ai
+// const {
+//   GoogleGenerativeAI,
+//   HarmCategory,
+//   HarmBlockThreshold,
+// } = require("@google/generative-ai");
+import {
+  GoogleGenerativeAI,
+  HarmCategory,
+  HarmBlockThreshold,
+} from "@google/generative-ai";
+const MODEL_NAME = "gemini-1.0-pro";
+const API_KEY = "AIzaSyAPmDX_93NOs7rZuaIl4OkQKi0GQgrWf2I";
+
+// run();
 
 const CodeEditor = () => {
   const [isAIDrawerOpen, setisAIDrawerOpen] = useState(false);
@@ -15,7 +33,81 @@ const CodeEditor = () => {
   const [value, setValue] = useState("");
   const [responseValue, setResponseValue] = useState([]);
   const [monacoValue, setMonacoValue] = useState("");
+  const [aiResults, setAiResults] = useState("");
+  const [chatCount, setChatCount] = useState(0);
+  const [lastChatTime, setLastChatTime] = useState(null);
+  useEffect(() => {
+    const now = new Date().getTime();
+    if (lastChatTime && now - lastChatTime < 3600000 && chatCount >= 10) {
+      setAiResults(
+        "You have reached the maximum of 10 chats per hour. Please try again later.⏳"
+      );
+    } else {
+      setAiResults("");
+    }
+  }, [chatCount, lastChatTime]);
+  console.log(monacoValue);
 
+  var user_prompt = "\n " + value;
+
+  async function runChat() {
+    const now = new Date().getTime();
+    if (lastChatTime && now - lastChatTime < 3600000 && chatCount >= 10) {
+      setAiResults(
+        "You have reached the maximum of 10 chats per hour. Please try again later."
+      );
+      return;
+    }
+    const genAI = new GoogleGenerativeAI(API_KEY);
+    const model = genAI.getGenerativeModel({ model: MODEL_NAME });
+
+    const generationConfig = {
+      temperature: 0.9,
+      topK: 1,
+      topP: 1,
+      maxOutputTokens: 2048,
+    };
+
+    const safetySettings = [
+      {
+        category: HarmCategory.HARM_CATEGORY_HARASSMENT,
+        threshold: HarmBlockThreshold.BLOCK_MEDIUM_AND_ABOVE,
+      },
+      {
+        category: HarmCategory.HARM_CATEGORY_HATE_SPEECH,
+        threshold: HarmBlockThreshold.BLOCK_MEDIUM_AND_ABOVE,
+      },
+      {
+        category: HarmCategory.HARM_CATEGORY_SEXUALLY_EXPLICIT,
+        threshold: HarmBlockThreshold.BLOCK_MEDIUM_AND_ABOVE,
+      },
+      {
+        category: HarmCategory.HARM_CATEGORY_DANGEROUS_CONTENT,
+        threshold: HarmBlockThreshold.BLOCK_MEDIUM_AND_ABOVE,
+      },
+    ];
+    setAiResults("Waiting on response..😶‍🌫️");
+    const chat = model.startChat({
+      generationConfig,
+      safetySettings,
+      history: [],
+    });
+    const parts = [prompt + user_prompt];
+    try {
+      const result = await chat.sendMessage(parts[0]);
+      const response = result.response;
+      console.log(response.text().split());
+      setAiResults(response.text().split());
+      setMonacoValue(response.text());
+      return;
+      // setHistory(history + user_prompt);
+    } catch (error) {
+      setAiResults("A.I Error☹️");
+    }
+    setChatCount(chatCount + 1);
+    setLastChatTime(now);
+    console.log(chatCount);
+  }
   const openAIDrawer = () => {
     setisAIDrawerOpen(true);
   };
@@ -36,7 +128,7 @@ const CodeEditor = () => {
   };
 
   const generate_code = async () => {
-    await fetch("https://typesnakeapi.azurewebsites.net/generate_code", {
+    await fetch("https://typesnake.azurewebsites.net/generate_code", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -63,8 +155,8 @@ const CodeEditor = () => {
   };
 
   return (
-    <Section crosses>
-      <Heading tag="Code Editor" title="DEMO" />
+    <Section crosses id="editor">
+      <Heading tag="Code Editor" title="DEMO" id="edit" />
       <div className="mr-20 w-40 h-12 float-right flex items-end justify-around pb-2">
         <button
           id="run"
@@ -112,7 +204,9 @@ const CodeEditor = () => {
         title={"TypeSnake AI"}
       >
         <div className="mb-2 w-96">
-          <p className="tracking-wide leading-loose text-justify">{value}</p>
+          <p className="tracking-wide leading-loose text-justify">
+            {aiResults}
+          </p>
         </div>
         <div className="w-full relative">
           <input
@@ -122,9 +216,12 @@ const CodeEditor = () => {
             className="w-full rounded-2xl px-4 py-2"
             value={value}
             onChange={handleChange}
-            placeholder="Consult AI ...."
+            placeholder="Create an abstract that accepts 2 int variables and scribes it ...."
           />
-          <IoSend className="absolute right-2 top-3 hover:text-blue-300 cursor-pointer" />
+          <IoSend
+            className="absolute right-2 top-3 hover:text-blue-300 cursor-pointer"
+            onClick={runChat}
+          />
         </div>
       </DrawerDemo>
       <DrawerDemo

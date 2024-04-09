@@ -84,7 +84,7 @@ const Header = () => {
         >
           Documentation
         </a>
-        <Button className="hidden lg:flex" href="#Docs">
+        <Button className="hidden lg:flex" href="#editor">
           Demo
         </Button>
 
