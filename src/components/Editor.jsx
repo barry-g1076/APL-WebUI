@@ -270,7 +270,7 @@ hail PRINTS(4,6)@`);
                 <Editor
                   defaultLanguage="customLanguage"
                   language="customLanguage"
-                  theme="vs-dark"
+                  theme="customTheme"
                   value={monacoValue}
                   options={{
                     selectOnLineNumbers: true,
@@ -287,7 +287,7 @@ hail PRINTS(4,6)@`);
                       customTypeSnake
                     );
                     monaco.editor.defineTheme("customTheme", {
-                      base: "vs",
+                      base: "vs-dark",
                       inherit: true,
                       rules: [
                         {
@@ -295,15 +295,16 @@ hail PRINTS(4,6)@`);
                           foreground: "#AAFF00",
                           fontStyle: "bold",
                         },
-                        { token: "boolean", foreground: "#008000" },
-                        { token: "number", foreground: "#008000" },
+                        { token: "boolean", foreground: "#AAFF00" },
+                        { token: "number", foreground: "#AAFF00" },
                         { token: "string", foreground: "#800080" },
                         {
                           token: "comment",
                           foreground: "#808080",
                           fontStyle: "italic",
                         },
-                        { token: "identifier", foreground: "#0000FF" },
+                        { token: "identifier", foreground: "#FFD700" }, // Adjusted identifier color
+                        // Add more token colors as needed
                       ],
                     });
                   }}
