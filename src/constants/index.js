@@ -112,7 +112,7 @@ export const roadmap = [
     title: "Integration with LLM",
     text: "The TypeSnake IDE integrates AI for enhanced productivity, revolutionizing coding experiences with intelligent assistance.",
     date: "April 2024",
-    status: "progress",
+    status: "done",
     imageUrl: ai_integration,
     colorful: true,
   },

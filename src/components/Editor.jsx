@@ -32,7 +32,41 @@ const CodeEditor = () => {
   const [isTerminalDrawerOpen, setisTerminalDrawerOpen] = useState(false);
   const [value, setValue] = useState("");
   const [responseValue, setResponseValue] = useState([]);
-  const [monacoValue, setMonacoValue] = useState("");
+  const [monacoValue, setMonacoValue] =
+    useState(`//All supported functionally is found in the source code.py file
+//Declaration
+unlock int _COUNT = (0 + 2 + 3)@ #Declaration
+lock string _Global_var = "This is a global variable."@
+lock int _TEN = 10@
+lock float _PI = 3.14@ 
+unlock bool _BINARY = true@
+
+//Assignment
+lock int _Assignment@ #Declaration
+_Assignment = 5+7@ #Assignment
+lock int _Wrong@ 
+_Wrong = 11@
+
+//if-else conditional
+if (_TEN > _Wrong){
+    lock bool _Inside_IF = true@
+    scribe("This is _Inside_IF", _Inside_IF)@
+    scribe("10 is greater than 11")@
+    # _TEN = 11@
+} 
+else {
+    lock bool _Inside_ELSE = false@
+    scribe("This is _Inside_ELSE", _Inside_ELSE)@
+    # scribe("This is _Inside_IF", _Inside_IF)@
+    scribe("10 is not greater than 11")@
+}
+//abstract declaration (function)
+abstract PRINTS(int _X, int _Y){
+  scribe("This is X: ", _X)@
+  scribe("This is Y: ", _Y)@
+}
+//abstract call
+hail PRINTS(4,6)@`);
   const [aiResults, setAiResults] = useState("");
   const [chatCount, setChatCount] = useState(0);
   const [lastChatTime, setLastChatTime] = useState(null);
@@ -128,7 +162,7 @@ const CodeEditor = () => {
   };
 
   const generate_code = async () => {
-    await fetch("https://typesnake.azurewebsites.net/generate_code", {
+    await fetch("https://typesnakeapi.azurewebsites.net/generate_code", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
