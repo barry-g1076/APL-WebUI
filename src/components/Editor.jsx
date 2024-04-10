@@ -128,7 +128,7 @@ const CodeEditor = () => {
   };
 
   const generate_code = async () => {
-    await fetch("https://typesnake.azurewebsites.net/generate_code", {
+    await fetch("https://typesnakeapi.azurewebsites.net/generate_code", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
