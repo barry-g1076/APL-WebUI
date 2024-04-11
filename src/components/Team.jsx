@@ -3,7 +3,7 @@ import Heading from "./Heading";
 import sharethiaResume from "../constants/Sharethia's Resume.pdf";
 import barringtonResume from "../constants/Barrington Patterson.pdf";
 // import christinaResume from "../assets/Christina_Resume.pdf";
-import hughResume from "../constants/Hugh_Scott_Resume_April_2024.pdf";
+import hughResume from "../constants/Hugh_Scott_Resume.pdf";
 // import knight from "../assets/knights/knight1.jpeg";
 // import knight2 from "../assets/knights/knight2.jpeg";
 // import knight3 from "../assets/knights/knight3.jpeg";
