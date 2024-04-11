@@ -7,7 +7,7 @@ import Terminal from "./Terminal";
 import { VscRunAll } from "react-icons/vsc";
 import { GiArtificialIntelligence } from "react-icons/gi";
 import { Tooltip } from "react-tooltip";
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import { DrawerDemo } from "./Drawers";
 import prompt from "../constants/promtp_trainer";
 
@@ -307,6 +307,8 @@ hail PRINTS(4,6)@`);
                         // Add more token colors as needed
                       ],
                     });
+                    // Set the theme
+                    // editor.setTheme(customTypeSnake);
                   }}
                 />
               </div>
