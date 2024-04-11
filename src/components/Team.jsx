@@ -2,7 +2,7 @@ import Section from "./Section";
 import Heading from "./Heading";
 import sharethiaResume from "../constants/Sharethia's Resume.pdf";
 import barringtonResume from "../constants/Barrington Patterson.pdf";
-// import christinaResume from "../assets/Christina_Resume.pdf";
+import christinaResume from "../constants/Christina Wilson.pdf";
 import hughResume from "../constants/Hugh_Scott_Resume.pdf";
 // import knight from "../assets/knights/knight1.jpeg";
 // import knight2 from "../assets/knights/knight2.jpeg";
@@ -107,6 +107,7 @@ const Teams = () => {
             id="1903419"
             bio={ChristinaBio}
             documentName="Christina Wilson's Resume"
+            document={christinaResume}
           />
         </div>
       </div>

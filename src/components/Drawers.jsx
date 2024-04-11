@@ -21,7 +21,7 @@ export function DrawerDemo({
   return (
     <Drawer open={isOpen} onClose={onClose}>
       <DrawerContent className={"bg-black"}>
-        <div className="mx-auto w-3/4 h-fit px-5">
+        <div className="md:mx-auto md:w-3/4  md:h-fit md:px-5">
           <DrawerHeader>
             <DrawerTitle>{title}</DrawerTitle>
           </DrawerHeader>
