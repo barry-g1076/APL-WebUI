@@ -15,6 +15,7 @@ const ChristinaBio =
   "Christina shines as a multifaceted talent, seamlessly blending expertise in UX, UI, and syntax design. Her role encompasses not only crafting visually stunning interfaces but also ensuring intuitive user experiences and elegant syntax structures. With a passion for pushing boundaries, Christina consistently delivers designs that captivate and inspire. ";
 const BarringtonBio =
   "Barrington, a top-tier Frontend Engineer, brings the captivating digital landscape to life before your eyes. His precise craftsmanship guarantees flawless frontend implementation. With expertise in cutting-edge technologies and an eye for detail, Barrington consistently delivers exceptional user experiences.";
+
 const TeamCard = (props) => {
   const jobTitle = props.jobTitle;
   const name = props.name;

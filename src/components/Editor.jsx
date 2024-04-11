@@ -65,7 +65,7 @@ const CodeEditor = () => {
   const [value, setValue] = useState("");
   const [responseValue, setResponseValue] = useState([]);
   const [monacoValue, setMonacoValue] =
-    useState(`//All supported functionally is found in the source code.py file
+    useState(`//All supported functionally is found in the documentation & User Guide
 //Declaration
 unlock int _COUNT = (0 + 2 + 3)@ #Declaration
 lock string _Global_var = "This is a global variable."@
