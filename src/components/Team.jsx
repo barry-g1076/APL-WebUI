@@ -8,7 +8,7 @@ import hughResume from "../constants/Hugh_Scott_Resume.pdf";
 // import knight2 from "../assets/knights/knight2.jpeg";
 // import knight3 from "../assets/knights/knight3.jpeg";
 const HughBio =
-  "Hugh leads as Team Lead and Compiler Engineer, is entrusted with manifesting the visionary TypeSnake concept. His adeptness in executing intricate compiler architecture reflects profound understanding of cutting-edge technologies. With exceptional leadership and relentless pursuit of excellence, he seeks Hugh innovation and project excellence.";
+  "Hugh leads as Team Lead and Compiler Engineer, is entrusted with manifesting the visionary TypeSnake concept. His adeptness in executing intricate compiler architecture reflects profound understanding of cutting-edge technologies. With exceptional leadership and relentless pursuit of excellence, he craves innovation and project excellence.";
 const SharethiaBio =
   "Sharethia, assumes the pivotal role of a language and grammar architect on TypeSnake. Leveraging her expertise in software design and development, she spearheads the design and implementation of the compiler's language and grammar. Sharethia consistently delivers solutions that push boundaries and drive project success.";
 const ChristinaBio =
