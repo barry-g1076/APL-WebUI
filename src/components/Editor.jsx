@@ -275,7 +275,7 @@ hail PRINTS(4,6)@`);
                   options={{
                     selectOnLineNumbers: true,
                     lineNumbers: "on",
-                    readOnly: false, // Allows for copying code snippets
+                    readOnly: false,
                     scrollBeyondLastLine: true,
                   }}
                   onChange={(monacoValue) => setMonacoValue(monacoValue)}
@@ -303,12 +303,12 @@ hail PRINTS(4,6)@`);
                           foreground: "#808080",
                           fontStyle: "italic",
                         },
-                        { token: "identifier", foreground: "#FFD700" }, // Adjusted identifier color
+                        { token: "identifier", foreground: "#FFD700" },
                         // Add more token colors as needed
                       ],
                     });
                     // Set the theme
-                    // editor.setTheme(customTypeSnake);
+                    editor.updateOptions({ theme: "customTheme" });
                   }}
                 />
               </div>
