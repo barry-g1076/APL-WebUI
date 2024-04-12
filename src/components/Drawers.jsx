@@ -25,7 +25,7 @@ export function DrawerDemo({
           <DrawerHeader>
             <DrawerTitle>{title}</DrawerTitle>
           </DrawerHeader>
-          <div className="p-4 pb-0 w-full h-full">{children}</div>
+          <div className="p-4 pb-0 w-full h-1/3">{children}</div>
           {doSumbit && (
             <div className="flex">
               <DrawerFooter className="flex-auto mr-0 pr-1">
