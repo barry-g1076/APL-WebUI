@@ -334,7 +334,7 @@ hail PRINTS(4,6)@`);
               </article>
             </div>
           </div>
-          <div className="w-full h-10 relative flex flex-row">
+          <div className="w-full h-10 flex flex-row">
             <input
               type="text"
               name="ai-input"
