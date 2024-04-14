@@ -41,7 +41,7 @@ const TeamCard = (props) => {
       <div className=" pt-auto flex w-full flex-row justify-between">
         <div className="flex-grow w-3/5 ">
           <a
-            href="#"
+            href=""
             className="inline-flex items-center mt-4 font-semibold text-blue-600 lg:mb-0 hover:text-neutral-600"
             title="read more"
           >
