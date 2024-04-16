@@ -8,11 +8,11 @@ import MenuSvg from "../assets/svg/MenuSvg";
 import { HamburgerMenu } from "./design/Header";
 import { useState } from "react";
 import document from "../constants/APL_Group_Project_Report.pdf";
+// import { toast } from "sonner";
 
 const Header = () => {
   const pathname = useLocation();
   const [openNavigation, setOpenNavigation] = useState(false);
-
   const toggleNavigation = () => {
     if (openNavigation) {
       setOpenNavigation(false);
@@ -84,7 +84,19 @@ const Header = () => {
         >
           Documentation
         </a>
-        <Button className="hidden lg:flex" href="#editor">
+        <Button
+          className="hidden lg:flex"
+          href="#editor"
+          // onClick={() =>
+          //   toast("Event has been created", {
+          //     description: "Sunday, December 03, 2023 at 9:00 AM",
+          //     action: {
+          //       label: "Undo",
+          //       onClick: () => console.log("Undo"),
+          //     },
+          //   })
+          // }
+        >
           Demo
         </Button>
 
