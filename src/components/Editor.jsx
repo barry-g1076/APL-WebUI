@@ -203,7 +203,7 @@ hail PRINTS(4,6)@`);
   };
 
   const generate_code = async () => {
-    await fetch("https://typesnakeapi.azurewebsites.net/generate_code", {
+    await fetch("https://typesnakeapi-zmwrhpfjma-uc.a.run.app/generate_code", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
